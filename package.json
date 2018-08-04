@@ -1,0 +1,17 @@
+{
+  "name": "sass_starter_pack",
+  "version": "1.0.0",
+  "description": "Biler plate for sass projects",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "fernando pineda <fernandojpt1203@gmail.com> (www.ferjpi.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^4.0.1"
+  }
+}

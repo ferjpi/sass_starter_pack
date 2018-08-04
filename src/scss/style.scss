@@ -1,0 +1,136 @@
+@import 'variables';
+@import 'functions';
+// Arriba se estan importando los archivos
+// no es necesario colocar el guion piso
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $body-bg;
+  font-family: $main-font;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+.container {
+  max-width: $container;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header#main-header {
+  padding: 1em;
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  //aqui se pasa por parametro el fondo donde se encuentran las letras
+
+  h1 {
+    font-size: 40px;
+  }
+}
+
+nav#main-nav {
+  background: $secondary-color;
+  height: 40px;
+  ul {
+    list-style: none;
+    padding-top: 10px;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    color: #fff;
+    padding: 0 10px;
+    &:hover {
+      color: #ccc;
+    }
+  }
+}
+
+#portrait {
+  .portrait-image {
+    padding: 40px 0;
+  }
+}
+
+
+// Esta es la clase añadida en la parte
+// de abajo
+.section {
+  padding: $section-padding;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+  p {
+    padding-bottom: 20px;
+  }
+}
+#section-a {
+  // Esto para colocar los valores de la clase
+  // anteriormente hecha que no esta en html
+  // pero se puede colocar aca (extend)
+  @extend .section;
+  background: $light-color;
+  color: set-text-color($light-color);
+}
+
+#section-b {
+  @extend .section;
+  background: $dark-color;
+  color: set-text-color($dark-color);
+}
+
+#section-c {
+  padding: $section-padding;
+  background: $light-color;
+  color: set-text-color($light-color);
+
+  span {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+
+    p {
+      text-align: center;
+    }
+  }
+  p {
+    text-align: justify;
+  }
+}
+
+.button {
+  padding: 10px 15px;
+}
+
+.button-a {
+  @extend .button;
+  background: darken( $primary-color, 10%);
+  color: set-text-color($primary-color);
+}
+.button-b {
+  @extend .button;
+  background: lighten( $secondary-color, 10%);
+  color: set-text-color($secondary-color);
+}
+
+#endPage {
+  padding: 5px 0;
+  background: darken($primary-color, 5%);
+  color: set-text-color($primary-color);
+
+  h6 {
+    font-style: italic;
+  }
+}

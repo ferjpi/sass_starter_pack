@@ -1,0 +1,14 @@
+// Functions
+// Con esto se cambia el color del texto
+// dependiendo del fondo
+@function set-text-color($bg-color) {
+  @if(lightness($bg-color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Es necesario para que estos archivos
+// sean importados en el archivo principal
+// que lleven el guion piso
